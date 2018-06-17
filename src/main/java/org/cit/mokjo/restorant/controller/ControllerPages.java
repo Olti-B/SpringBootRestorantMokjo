@@ -1,8 +1,15 @@
 package org.cit.mokjo.restorant.controller;
 
+import java.sql.Date;
+import java.util.Random;
+
+import org.cit.mokjo.restorant.migration_tabels.BookTable;
 import org.cit.mokjo.restorant.migration_tabels.Users;
+import org.cit.mokjo.restorant.service.BookTableServiceImpl;
 import org.cit.mokjo.restorant.service.FoodServiceImpl;
+import org.cit.mokjo.restorant.service.TabelServiceImpl;
 import org.cit.mokjo.restorant.service.UserService;
+import org.cit.mokjo.restorant.utilities.SendMail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,7 +24,15 @@ public class ControllerPages {
     private FoodServiceImpl foodService;
 
     @Autowired
+    private TabelServiceImpl tabelService;
+
+    @Autowired
     private UserService userService;
+
+    @Autowired
+    private BookTableServiceImpl bookTableService;
+
+    private Random rand = new Random();
 
     @RequestMapping(value = { "/", "home", "" }, method = RequestMethod.GET)
     public String welcome(Model model) {
@@ -74,7 +89,26 @@ public class ControllerPages {
     @RequestMapping(value = { "/auth_user/home_user" }, method = RequestMethod.GET)
     public String authenticateUser(Model model) {
 	model.addAttribute("foods", foodService.getAllItems());
-	return "auth_user/home_user";
+	model.addAttribute("tabel", tabelService.getAllItems());
+
+	return "/auth_user/home_user";
+    }
+
+    @RequestMapping(value = { "/book" }, method = RequestMethod.POST)
+    public String book(Model model, @RequestParam String name, Date date, String email, String table, String phone,
+	    String people, String message) {
+
+	if (name.isEmpty() || date.equals(null) || email.isEmpty() || table.isEmpty() || phone.isEmpty()
+		|| people.isEmpty() || message.isEmpty()) {
+	    model.addAttribute("fildsMess", "Plesase empty all fils");
+	} else {
+	    Integer reserv = rand.nextInt(1000000);
+	    bookTableService.bookTable(new BookTable(name, email, Integer.parseInt(people), String.valueOf(reserv),
+		    table, phone, message, date));
+	    return "/auth_user/success";
+	}
+	return "/auth_user/home_user";
+
     }
 
 }
