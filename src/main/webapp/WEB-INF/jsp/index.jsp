@@ -108,7 +108,7 @@
 						</div>
 						<div class="col-md-6 col-sm-6 details-text">
 							<div class="content-holder">
-								<h2>SUNDAY BRANCH</h2>
+								<h2>SUNDAY BRUNCH</h2>
 								<p>Whether it is the ending to your epic Saturday, the beginning
 								 of Sunday or you're looking for an exceptional brunch with friends and family, Mokjo 
 								 will deliver. Enjoy steak and seafood, fire-roasted eggs and signature gourmet omelettes,
@@ -179,9 +179,9 @@
 			<div class="col-md-12 text-center">
 				<h1 class="header-h">Book Your table</h1>
 				<p class="header-p">
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-					nonummy <br />nibh euismod tincidunt ut laoreet dolore magna
-					aliquam.
+					Whatever the reason - from a casual catch-up with friends or a mid-week family treat to a special birthday - we've got you covered.
+By booking a table at Mokjo, you're guaranteeing your place in one of our family-friendly restaurants on a date and time of your choice, so say goodbye to waiting times!
+<br />
 				</p>
 			</div>
 		</div>
