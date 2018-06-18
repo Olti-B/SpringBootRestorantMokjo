@@ -55,30 +55,27 @@
 			<div class="col-md-12 text-center marb-35">
 				<h1 class="header-h">Delicious Journey</h1>
 				<p class="header-p">
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-					nonummy <br />nibh euismod tincidunt ut laoreet dolore magna
-					aliquam.
+					For real healthy food that's about pleasure and delight.
+					 <br />
 				</p>
 			</div>
 			<div class="col-md-1"></div>
 			<div class="col-md-10">
 				<div class="col-md-6 col-sm-6">
 					<div class="about-info">
-						<h2 class="heading">vel illum qui dolorem eum</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-							Libero impedit inventore culpa vero accusamus in nostrum
-							dignissimos modi, molestiae. Autem iusto esse necessitatibus ex
-							corporis earum quaerat voluptates quibusdam dicta!</p>
-						<div class="details-list">
+						<h2 class="heading">Welcome to our restaurant!</h2>
+						<p>
+Welcome to Mokjo, 
+our restaurant located at Ali Demi, 
+where we invite guests to celebrate life and enjoy modern and traditional cuisine. Our goal at Mokjo is to unify 
+our guest's cultures and spirits with our own, expressing passion and generosity in the cuisine we share.
+Whether part of a party of fifty or a party of two, your experience throughout our elegant, yet comfortable space is eventful.
+</p>
+						 <div class="details-list">
 							<ul>
-								<li><i class="fa fa-check"></i>Lorem ipsum dolor sit amet,
-									consectetur adipiscing elit</li>
-								<li><i class="fa fa-check"></i>Quisque finibus eu lorem
-									quis elementum</li>
-								<li><i class="fa fa-check"></i>Vivamus accumsan porttitor
-									justo sed</li>
-								<li><i class="fa fa-check"></i>Curabitur at massa id tortor
-									fermentum luctus</li>
+								<li></li>
+								<li></li>
+								<li></li>
 							</ul>
 						</div>
 					</div>
@@ -108,15 +105,14 @@
 						</div>
 						<div class="col-md-6 col-sm-6 details-text">
 							<div class="content-holder">
-								<h2>SUNDAY BRANCH</h2>
-								<p>Whether it is the ending to your epic Saturday, the
-									beginning of Sunday or you're looking for an exceptional brunch
-									with friends and family, Mokjo will deliver. Enjoy steak and
-									seafood, fire-roasted eggs and signature gourmet omelettes,
-									fruit, pastries, custom salads, and other delicious surprises.
-									An entertaining DJ makes the atmosphere fun, where guests are
-									lively, and you're sure to have an amazing time. Mokjo is more
-									than a restaurant, it's an experience.</p>
+
+								<h2>SUNDAY BRUNCH</h2>
+								<p>Whether it is the ending to your epic Saturday, the beginning
+								 of Sunday or you're looking for an exceptional brunch with friends and family, Mokjo 
+								 will deliver. Enjoy steak and seafood, fire-roasted eggs and signature gourmet omelettes,
+								 fruit, pastries, custom salads, and other delicious surprises. An entertaining DJ makes
+								 the atmosphere fun, where guests are lively, and you're sure to have an amazing time. 
+								 Mokjo is more than a restaurant, it's an experience. </p>
 								<address>
 									<strong>Place: </strong> Mokjo at Ali Demi <br /> <strong>Time:
 									</strong> 07:30pm
@@ -184,9 +180,9 @@
 			<div class="col-md-12 text-center">
 				<h1 class="header-h">Book Your table</h1>
 				<p class="header-p">
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-					nonummy <br />nibh euismod tincidunt ut laoreet dolore magna
-					aliquam.
+					Whatever the reason - from a casual catch-up with friends or a mid-week family treat to a special birthday - we've got you covered.
+By booking a table at Mokjo, you're guaranteeing your place in one of our family-friendly restaurants on a date and time of your choice, so say goodbye to waiting times!
+<br />
 				</p>
 			</div>
 		</div>
@@ -244,7 +240,7 @@
 						<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a
 							href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 					</div>
-					<p class="copyright clear-float">© Delicious Theme. All Rights
+					<p class="copyright clear-float">Â© Delicious Theme. All Rights
 						Reserved
 					<div class="credits">
 						<!--
