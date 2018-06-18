@@ -114,7 +114,7 @@
 								 will deliver. Enjoy steak and seafood, fire-roasted eggs and signature gourmet omelettes,
 								 fruit, pastries, custom salads, and other delicious surprises. An entertaining DJ makes
 								 the atmosphere fun, where guests are lively, and you're sure to have an amazing time. 
-								 Mokjo is more than a restaurant, it’s an experience. </p>
+								 Mokjo is more than a restaurant, it's an experience. </p>
 								<address>
 									<strong>Place: </strong> Mokjo at Ali Demi <br />
 									<strong>Time: </strong> 07:30pm
@@ -135,11 +135,12 @@
 		<div class="row">
 			<div class="col-md-12 text-center marb-35">
 				<h1 class="header-h">Menu List</h1>
-				<p class="header-p">
+				
+				<!-- <p class="header-p">
 					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
 					nonummy <br />nibh euismod tincidunt ut laoreet dolore magna
 					aliquam.
-				</p>
+				</p> -->
 			</div>
 
 			<div class="col-md-12  text-center" id="menu-flters">
