@@ -1,5 +1,7 @@
 package org.cit.mokjo.restorant.service;
 
+import java.util.List;
+
 import org.cit.mokjo.restorant.migration_tabels.Users;
 import org.cit.mokjo.restorant.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +27,12 @@ public class UserServiceImpl implements UserService{
     public Users findUsersByEmail(String email) {
 	return userRepository.findUsersByEmail(email);
     }
-    
+
+    @Override
+    public List<Users> getAllUsers() {
+	
+	return userRepository.findAll();
+    }
+
 
 }

@@ -1,5 +1,7 @@
 package org.cit.mokjo.restorant.service;
 
+import java.util.List;
+
 import org.cit.mokjo.restorant.migration_tabels.Users;
 
 public interface UserService {
@@ -9,5 +11,7 @@ public interface UserService {
 	public void saveUser(Users user);
 
 	public Users findUsersByEmail(String email);
+	
+	public List<Users> getAllUsers();
 
 }

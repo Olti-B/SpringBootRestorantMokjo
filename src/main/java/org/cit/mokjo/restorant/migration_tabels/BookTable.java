@@ -63,6 +63,12 @@ public class BookTable implements Serializable {
 	this.message = message;
 	this.date = date;
     }
+    
+
+    public BookTable() {
+	super();
+    }
+
 
     public String getName() {
 	return name;
@@ -84,6 +90,10 @@ public class BookTable implements Serializable {
         return id;
     }
     
+
+    public String getReservId() {
+        return reservId;
+    }
 
     public String getPhone() {
 	return phone;

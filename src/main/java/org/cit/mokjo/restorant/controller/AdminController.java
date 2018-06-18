@@ -17,7 +17,7 @@ public class AdminController {
     private FoodServiceImpl foodService;
 
     @Autowired
-    private TabelServiceImpl tabelService;
+    private TabelServiceImpl tableService;
 
     @Autowired
     private UserService userService;
@@ -28,7 +28,8 @@ public class AdminController {
     @RequestMapping(value = { "/admin" }, method = RequestMethod.GET)
     public String admin(Model model) {
 	model.addAttribute("foods", foodService.getAllItems());
-	
+	model.addAttribute("users", userService.getAllUsers());
+	model.addAttribute("table", bookTableService.getAllItems());
 	return "/admin/admin";
     }
 

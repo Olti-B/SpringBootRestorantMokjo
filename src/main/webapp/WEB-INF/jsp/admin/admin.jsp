@@ -27,9 +27,10 @@
 	<div class="bg-color">
 		<div class="container">
 			<div class="row">
+
 				<div class="inner text-center">
 					<h1 class="logo-name">Delicious</h1>
-					<h2>Welcome Admin</h2>
+					<h2>Food To fit your lifestyle & health.</h2>
 				</div>
 			</div>
 		</div>
@@ -38,7 +39,7 @@
 	<section id="menu-list" class="section-padding">
 	<div class="container">
 		<div class="row">
-		<h4 class="widget-title">Menu</h4>
+			<h4 class="widget-title">Menu</h4>
 			<table class="table">
 				<thead>
 					<tr>
@@ -46,8 +47,9 @@
 						<th scope="col">Food Name</th>
 						<th scope="col">Food Description</th>
 						<th scope="col">Time Serving</th>
-						<th scope="col">Food Id</th>
-						<th scope="col">Food Price</th>
+						<th scope="col">Time Serving</th>
+						<th scope="col">Price</th>
+						<th scope="col">Edit</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -60,6 +62,7 @@
 								<td>${food.getTimeServing()}</td>
 								<td>${food.getFoodId()}</td>
 								<td>${food.getFoodPrice()}</td>
+								<td><a href="/edtifood/id=">Edit</a></td>
 							</tr>
 
 						</c:forEach>
@@ -67,11 +70,88 @@
 				</tbody>
 			</table>
 
+
 		</div>
 
 	</div>
+	<div class="container">
+		<div class="row">
+			<h4 class="widget-title">Users</h4>
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">id</th>
+						<th scope="col">User Name</th>
+						<th scope="col">User Email</th>
+						<th scope="col">User Role</th>
+						<th scope="col">Edit</th>
+					</tr>
+				</thead>
+				<tbody>
+					<c:if test="${not empty users}">
+						<c:forEach items="${users}" var="u">
+							<tr>
+								<th scope="row">${u.getId()}</th>
+								<td>${u.getUsername()}</td>
+								<td>${u.getEmail()}</td>
+								<td>${u.getRole()}</td>
+								<td><a href="/edtiUser/id=">Edit</a></td>
+							</tr>
 
+						</c:forEach>
+					</c:if>
+				</tbody>
+			</table>
+
+
+		</div>
+
+	</div>
+	
+		<div class="container">
+		<div class="row">
+			<h4 class="widget-title">Book Table</h4>
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">id</th>
+						<th scope="col">User Name</th>
+						<th scope="col">User Email</th>
+						<th scope="col">People</th>
+						<th scope="col">phone</th>
+						<th scope="col">Table Id</th>
+						<th scope="col">Message</th>
+						<th scope="col">Reserve Id</th>
+						<th scope="col">Date</th>						
+					</tr>
+				</thead>
+				<tbody>
+					<c:if test="${not empty table}">
+						<c:forEach items="${table}" var="t">
+							<tr>
+								<th scope="row">${t.getId()}</</th>
+								<td>${t.getName()}</td>
+								<td>${t.getEmail()}</td>
+								<td>${t.getPeople()}</td>
+								<td>${t.getPhone()}</td>
+								<td>${t.getTableId()}</td>
+								<td>${t.getMessage()}</td>
+								<td>${t.getDate()}</td>
+								<td><a href="/edtiUser/id=">Edit</a></td>
+							</tr>
+
+						</c:forEach>
+					</c:if>
+				</tbody>
+			</table>
+
+
+		</div>
+
+	</div>
+	
 	</section>
+
 	<footer class="footer text-center">
 	<div class="footer-top">
 		<div class="row">
