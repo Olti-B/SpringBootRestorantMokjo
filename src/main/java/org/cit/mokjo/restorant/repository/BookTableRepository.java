@@ -5,6 +5,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository("bookTabel")
-public interface BookTableRepository extends JpaRepository<BookTable, Long>{
+public interface BookTableRepository extends JpaRepository<BookTable, Long> {
+
+	public BookTable findBookTableById(Long id);
 
 }

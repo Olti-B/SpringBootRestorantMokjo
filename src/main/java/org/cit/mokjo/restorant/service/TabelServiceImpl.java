@@ -8,14 +8,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service("tableService")
-public class TabelServiceImpl implements TabelService{
+public class TabelServiceImpl implements TabelService {
 
-    @Autowired
-    private TabelRepository tableRepo; 
-    
-    @Override
-    public List<RestorantTabel> getAllItems() {
-	return tableRepo.findAll();
-    }
+	@Autowired
+	private TabelRepository tableRepo;
+
+	@Override
+	public List<RestorantTabel> getAllItems() {
+		return tableRepo.findAll();
+	}
+
+	@Override
+	public RestorantTabel findOne(Long id) {
+		return tableRepo.findTableById(id);
+	}
 
 }

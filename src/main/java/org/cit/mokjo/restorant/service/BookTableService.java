@@ -6,8 +6,10 @@ import org.cit.mokjo.restorant.migration_tabels.BookTable;
 
 public interface BookTableService {
 
-    public void bookTable(BookTable table);
-    
-    public List<BookTable> getAllItems();
-    
+	public void bookTable(BookTable table);
+
+	public List<BookTable> getAllItems();
+
+	public BookTable findOne(Long id);
+
 }

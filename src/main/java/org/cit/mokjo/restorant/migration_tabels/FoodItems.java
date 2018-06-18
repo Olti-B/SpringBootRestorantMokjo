@@ -19,64 +19,60 @@ public class FoodItems implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-	
+
 	@Column(nullable = false)
 	private String foodName;
-	
-	@Column(nullable = false)
+
+	@Column(nullable = true)
 	private String foodDescription;
-	
+
 	@Column(nullable = false)
 	private Double foodPrice;
-	
+
 	@Column(nullable = false)
 	private String timeServing;
-	
+
 	@Column(nullable = false)
 	private String foodId;
-	
+
 	@Column(nullable = false)
 	private Timestamp date;
 
 	public FoodItems(String foodName, String foodDescription, Double foodPrice, String timeServing, String foodId) {
-	    super();
-	    this.foodName = foodName;
-	    this.foodDescription = foodDescription;
-	    this.foodPrice = foodPrice;
-	    this.timeServing = timeServing;
-	    this.foodId = foodId;
+		super();
+		this.foodName = foodName;
+		this.foodDescription = foodDescription;
+		this.foodPrice = foodPrice;
+		this.timeServing = timeServing;
+		this.foodId = foodId;
 	}
-
 
 	public FoodItems() {
-	    super();
+		super();
 	}
 
-
 	public String getFoodName() {
-	    return foodName;
+		return foodName;
 	}
 
 	public String getFoodDescription() {
-	    return foodDescription;
+		return foodDescription;
 	}
-	
+
 	public Double getFoodPrice() {
-	    return foodPrice;
+		return foodPrice;
 	}
 
 	public String getTimeServing() {
-	    return timeServing;
+		return timeServing;
 	}
 
-	public String  getFoodId() {
-	    return foodId;
+	public String getFoodId() {
+		return foodId;
 	}
-
 
 	public long getId() {
-	    return id;
+		return id;
 	}
 
-	
 }

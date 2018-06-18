@@ -8,20 +8,26 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service("bookTable")
-public class BookTableServiceImpl implements BookTableService{
+public class BookTableServiceImpl implements BookTableService {
 
-    @Autowired
-    private BookTableRepository bookRepo;
-    
-    @Override
-    public void bookTable(BookTable table) {
-	bookRepo.save(table); 
-    }
+	@Autowired
+	private BookTableRepository bookRepo;
 
-    @Override
-    public List<BookTable> getAllItems() {
-	
-	return bookRepo.findAll();
-    }
+	@Override
+	public void bookTable(BookTable table) {
+		bookRepo.save(table);
+	}
+
+	@Override
+	public List<BookTable> getAllItems() {
+
+		return bookRepo.findAll();
+	}
+
+	@Override
+	public BookTable findOne(Long id) {
+		// TODO Auto-generated method stub
+		return bookRepo.findBookTableById(id);
+	}
 
 }

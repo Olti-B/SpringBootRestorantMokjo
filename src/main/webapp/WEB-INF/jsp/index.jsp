@@ -109,15 +109,17 @@
 						<div class="col-md-6 col-sm-6 details-text">
 							<div class="content-holder">
 								<h2>SUNDAY BRANCH</h2>
-								<p>Whether it is the ending to your epic Saturday, the beginning
-								 of Sunday or you're looking for an exceptional brunch with friends and family, Mokjo 
-								 will deliver. Enjoy steak and seafood, fire-roasted eggs and signature gourmet omelettes,
-								 fruit, pastries, custom salads, and other delicious surprises. An entertaining DJ makes
-								 the atmosphere fun, where guests are lively, and you're sure to have an amazing time. 
-								 Mokjo is more than a restaurant, it's an experience. </p>
+								<p>Whether it is the ending to your epic Saturday, the
+									beginning of Sunday or you're looking for an exceptional brunch
+									with friends and family, Mokjo will deliver. Enjoy steak and
+									seafood, fire-roasted eggs and signature gourmet omelettes,
+									fruit, pastries, custom salads, and other delicious surprises.
+									An entertaining DJ makes the atmosphere fun, where guests are
+									lively, and you're sure to have an amazing time. Mokjo is more
+									than a restaurant, it's an experience.</p>
 								<address>
-									<strong>Place: </strong> Mokjo at Ali Demi <br />
-									<strong>Time: </strong> 07:30pm
+									<strong>Place: </strong> Mokjo at Ali Demi <br /> <strong>Time:
+									</strong> 07:30pm
 								</address>
 								<!-- <p class="btn btn-imfo btn-read-more">Read more</p> -->
 							</div>
@@ -135,39 +137,42 @@
 		<div class="row">
 			<div class="col-md-12 text-center marb-35">
 				<h1 class="header-h">Menu List</h1>
-				
+
 				<!-- <p class="header-p">
 					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
 					nonummy <br />nibh euismod tincidunt ut laoreet dolore magna
 					aliquam.
 				</p> -->
 			</div>
+			
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">Time Serving</th>
+						<th scope="col">Food Name</th>
+						<th scope="col">Price</th>
+						<th scope="col">Description</th>
+					</tr>
+				</thead>
 
-			<div class="col-md-12  text-center" id="menu-flters">
-				<ul>
-					<li><a class="filter active" data-filter=".menu-restaurant">Show
-							All</a></li>
-					<li><a class="filter" data-filter=".breakfast">Breakfast</a></li>
-					<li><a class="filter" data-filter=".lunch">Lunch</a></li>
-					<li><a class="filter" data-filter=".dinner">Dinner</a></li>
-				</ul>
-			</div>
 
-			<div id="menu-wrapper">
 				<c:if test="${not empty foods}">
-					<c:forEach items="${foods}" var="food">
-						<div class="${food.getTimeServing()} menu-restaurant">
-							<span class="clearfix"> <a class="menu-title"
-								data-meal-img="assets/img/restaurant/rib.jpg">${food.getFoodName()}</a>
-								<span style="left: 166px; right: 44px;" class="menu-line"></span>
-								<span class="menu-price">${food.getFoodPrice()}</span>
-							</span> <span class="menu-subtitle">${food.getFoodDescription()}</span>
-						</div>
+					<div id="menu-wrapper">
+						<c:forEach items="${foods}" var="food">
+							<tbody>
+								<tr>
+									<td>${food.getTimeServing()}</td>
+									<td>${food.getFoodName()}</td>
+									<td>${food.getFoodPrice()}</td>
+									<td>${food.getFoodDescription()}</td>
+								</tr>
 
-					</c:forEach>
+							</tbody>
+						</c:forEach>
+					</div>
 				</c:if>
-			</div>
 
+			</table>
 		</div>
 	</div>
 	</section>

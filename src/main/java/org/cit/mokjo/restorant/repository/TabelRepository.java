@@ -6,6 +6,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository("tabelRepository")
-public interface TabelRepository extends JpaRepository<RestorantTabel, Long>{
-    
+public interface TabelRepository extends JpaRepository<RestorantTabel, Long> {
+
+	public RestorantTabel findTableById(Long id);
+
 }
