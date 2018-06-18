@@ -80,6 +80,11 @@ public class BookTable implements Serializable {
 	return tableId;
     }
 
+    public long getId() {
+        return id;
+    }
+    
+
     public String getPhone() {
 	return phone;
     }
@@ -96,4 +101,5 @@ public class BookTable implements Serializable {
 	return timeReservMade;
     }
 
+    
 }

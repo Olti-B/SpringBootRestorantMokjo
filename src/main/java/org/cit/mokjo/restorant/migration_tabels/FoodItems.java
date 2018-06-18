@@ -72,5 +72,11 @@ public class FoodItems implements Serializable {
 	public String  getFoodId() {
 	    return foodId;
 	}
+
+
+	public long getId() {
+	    return id;
+	}
+
 	
 }

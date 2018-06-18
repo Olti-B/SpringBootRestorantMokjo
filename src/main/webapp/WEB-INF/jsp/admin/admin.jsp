@@ -38,46 +38,39 @@
 	<section id="menu-list" class="section-padding">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12 text-center marb-35">
-				<h1 class="header-h">Menu List</h1>
-				<p class="header-p">
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-					nonummy <br />nibh euismod tincidunt ut laoreet dolore magna
-					aliquam.
-				</p>
-			</div>
+		<h4 class="widget-title">Menu</h4>
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">id</th>
+						<th scope="col">Food Name</th>
+						<th scope="col">Food Description</th>
+						<th scope="col">Time Serving</th>
+						<th scope="col">Food Id</th>
+						<th scope="col">Food Price</th>
+					</tr>
+				</thead>
+				<tbody>
+					<c:if test="${not empty foods}">
+						<c:forEach items="${foods}" var="food">
+							<tr>
+								<th scope="row">${food.getId()}</th>
+								<td>${food.getFoodName()}</td>
+								<td>${food.getFoodDescription()}</td>
+								<td>${food.getTimeServing()}</td>
+								<td>${food.getFoodId()}</td>
+								<td>${food.getFoodPrice()}</td>
+							</tr>
 
-			<div class="col-md-12  text-center" id="menu-flters">
-				<ul>
-					<li><a class="filter active" data-filter=".menu-restaurant">Show
-							All</a></li>
-					<li><a class="filter" data-filter=".breakfast">Breakfast</a></li>
-					<li><a class="filter" data-filter=".lunch">Lunch</a></li>
-					<li><a class="filter" data-filter=".dinner">Dinner</a></li>
-				</ul>
-			</div>
-
-			<div id="menu-wrapper">
-				<c:if test="${not empty foods}">
-					<c:forEach items="${foods}" var="food">
-						<div class="${food.getTimeServing()} menu-restaurant">
-							<span class="clearfix"> <a class="menu-title"
-								data-meal-img="assets/img/restaurant/rib.jpg">${food.getFoodName()}</a>
-								<span style="left: 166px; right: 44px;" class="menu-line"></span>
-
-								<span class="menu-price">${food.getFoodPrice()}</span>
-							</span> <span class="menu-subtitle">${food.getFoodDescription()}</span>
-
-							<br />
-							<p>
-								<span>Food Id: </span>${food.getFoodId()}</p>
-						</div>
-					</c:forEach>
-				</c:if>
-			</div>
+						</c:forEach>
+					</c:if>
+				</tbody>
+			</table>
 
 		</div>
+
 	</div>
+
 	</section>
 	<footer class="footer text-center">
 	<div class="footer-top">
@@ -89,9 +82,9 @@
 						<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a
 							href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 					</div>
-					<p class="copyright clear-float">
-						© Delicious Theme. All Rights Reserved
-						<div class="credits">
+					<p class="copyright clear-float">© Delicious Theme. All Rights
+						Reserved
+					<div class="credits">
 						<!--
                   All the links in the footer should remain intact.
                   You can delete the links only if you purchased the pro version.
@@ -106,9 +99,9 @@
 		</div>
 	</div>
 	</footer>
-	
+
 	<c:url value="/js/jquery.min.js" var="Jquery" />
-						<script src="${Jquery}"></script>
+	<script src="${Jquery}"></script>
 	<c:url value="/js/jquery.easing.min.js" var="JqueryMin" />
 	<script src="${JqueryMin}"></script>
 	<c:url value="/js/bootstrap.min.js" var="BootMin" />
@@ -118,5 +111,5 @@
 
 
 
-					</body>
+</body>
 </html>

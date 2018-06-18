@@ -49,4 +49,10 @@ public class RestorantTabel implements Serializable {
         return tabelId;
     }
 
+    public long getId() {
+        return id;
+    }
+
+
+    
 }

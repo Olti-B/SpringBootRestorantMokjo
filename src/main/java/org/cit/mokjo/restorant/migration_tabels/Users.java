@@ -79,6 +79,11 @@ public class Users implements Serializable {
 	public int getRole() {
 	    return role;
 	}
-	
+
+
+	public long getId() {
+	    return id;
+	}
+
 
 }

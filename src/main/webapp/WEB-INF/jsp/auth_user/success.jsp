@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -24,14 +23,7 @@
 	<section id="banner">
 	<div class="bg-color">
 		<header id="header">
-		<div class="container">
-			<div id="mySidenav" class="sidenav">
-				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Menu</a>
-				<a href="/">Home</a> <a href="/register">Register</a>
-			</div>
-			<!-- Use any element to open the sidenav -->
-			<span onclick="openNav()" class="pull-right menu-icon">Menu</span>
-		</div>
+
 		</header>
 		<div class="container">
 			<div class="row">
@@ -50,6 +42,7 @@
         <br><br> <h2 style="color:#0fad00">Success</h2>
         <h3>Dear, User</h3>
         <p style="font-size:20px;color:#5C5C5C;">Thank you for Booking In our Restorant.</p>
+        <a href="/auth_user/home_user">Go Back</a>
       
     <br><br>
         </div>

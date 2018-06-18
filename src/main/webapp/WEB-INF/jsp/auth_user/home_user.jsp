@@ -27,6 +27,7 @@
 	<div class="bg-color">
 		<div class="container">
 			<div class="row">
+			<a href="/out" >LogOut</a>
 				<div class="inner text-center">
 					<h1 class="logo-name">Delicious</h1>
 					<h2>Food To fit your lifestyle & health.</h2>

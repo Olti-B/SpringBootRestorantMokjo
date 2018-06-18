@@ -1,15 +1,16 @@
 package org.cit.mokjo.restorant.controller;
 
+import java.io.IOException;
 import java.sql.Date;
 import java.util.Random;
 
+import javax.servlet.http.HttpServletResponse;
 import org.cit.mokjo.restorant.migration_tabels.BookTable;
 import org.cit.mokjo.restorant.migration_tabels.Users;
 import org.cit.mokjo.restorant.service.BookTableServiceImpl;
 import org.cit.mokjo.restorant.service.FoodServiceImpl;
 import org.cit.mokjo.restorant.service.TabelServiceImpl;
 import org.cit.mokjo.restorant.service.UserService;
-import org.cit.mokjo.restorant.utilities.SendMail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -37,13 +38,12 @@ public class ControllerPages {
     @RequestMapping(value = { "/", "home", "" }, method = RequestMethod.GET)
     public String welcome(Model model) {
 	model.addAttribute("foods", foodService.getAllItems());
-
 	return "index";
     }
 
     @RequestMapping(value = { "/login" }, method = RequestMethod.GET)
     public String login() {
-	return "login";
+	return "loginC";
     }
 
     @RequestMapping(value = { "/register" }, method = RequestMethod.GET)
@@ -51,21 +51,34 @@ public class ControllerPages {
 	return "register";
     }
 
+    @RequestMapping(value = { "/out" }, method = RequestMethod.GET)
+    public void out(HttpServletResponse res) {
+	try {
+	    res.sendRedirect("/");
+	} catch (IOException e) {
+	    e.printStackTrace();
+	}
+    }
+
     @RequestMapping(value = { "/login" }, method = RequestMethod.POST)
     public String enterSys(@RequestParam String email, String password, Model model) {
 
 	if (!email.isEmpty() || !password.isEmpty()) {
+
 	    if (userService.findUsersByEmailAndPassword(email, password) == null) {
 		model.addAttribute("errorLogin", "Canot find user! Register First");
+		return "/loginC";
+
 	    } else {
+		model.addAttribute("foods", foodService.getAllItems());
+		model.addAttribute("tabel", tabelService.getAllItems());
+		System.out.println("It is logt");
 		return "/auth_user/home_user";
 	    }
-	    model.addAttribute("foods", foodService.getAllItems());
-
 	} else {
 	    model.addAttribute("errorLogin", "Empty the filds please");
+	    return "/loginC";
 	}
-	return "/login";
 
     }
 
@@ -76,7 +89,7 @@ public class ControllerPages {
 		model.addAttribute("userExist", "The User Exist In database");
 	    } else {
 		userService.saveUser(new Users(name, password, email, 1));
-		return "login";
+		return "loginC";
 	    }
 	} else {
 	    model.addAttribute("notSamePassword", "The password and confirm password dont mathch");
@@ -90,7 +103,6 @@ public class ControllerPages {
     public String authenticateUser(Model model) {
 	model.addAttribute("foods", foodService.getAllItems());
 	model.addAttribute("tabel", tabelService.getAllItems());
-
 	return "/auth_user/home_user";
     }
 
