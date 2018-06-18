@@ -55,30 +55,27 @@
 			<div class="col-md-12 text-center marb-35">
 				<h1 class="header-h">Delicious Journey</h1>
 				<p class="header-p">
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-					nonummy <br />nibh euismod tincidunt ut laoreet dolore magna
-					aliquam.
+					For real healthy food that's about pleasure and delight.
+					 <br />
 				</p>
 			</div>
 			<div class="col-md-1"></div>
 			<div class="col-md-10">
 				<div class="col-md-6 col-sm-6">
 					<div class="about-info">
-						<h2 class="heading">vel illum qui dolorem eum</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-							Libero impedit inventore culpa vero accusamus in nostrum
-							dignissimos modi, molestiae. Autem iusto esse necessitatibus ex
-							corporis earum quaerat voluptates quibusdam dicta!</p>
-						<div class="details-list">
+						<h2 class="heading">Welcome to our restaurant!</h2>
+						<p>
+Welcome to Mokjo, 
+our restaurant located at Ali Demi, 
+where we invite guests to celebrate life and enjoy modern and traditional cuisine. Our goal at Mokjo is to unify 
+our guest's cultures and spirits with our own, expressing passion and generosity in the cuisine we share.
+Whether part of a party of fifty or a party of two, your experience throughout our elegant, yet comfortable space is eventful.
+</p>
+						 <div class="details-list">
 							<ul>
-								<li><i class="fa fa-check"></i>Lorem ipsum dolor sit amet,
-									consectetur adipiscing elit</li>
-								<li><i class="fa fa-check"></i>Quisque finibus eu lorem
-									quis elementum</li>
-								<li><i class="fa fa-check"></i>Vivamus accumsan porttitor
-									justo sed</li>
-								<li><i class="fa fa-check"></i>Curabitur at massa id tortor
-									fermentum luctus</li>
+								<li></li>
+								<li></li>
+								<li></li>
 							</ul>
 						</div>
 					</div>
@@ -239,7 +236,7 @@ By booking a table at Mokjo, you're guaranteeing your place in one of our family
 						<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a
 							href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 					</div>
-					<p class="copyright clear-float">© Delicious Theme. All Rights
+					<p class="copyright clear-float">Â© Delicious Theme. All Rights
 						Reserved
 					<div class="credits">
 						<!--
