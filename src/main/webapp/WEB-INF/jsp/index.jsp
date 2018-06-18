@@ -108,16 +108,18 @@
 						</div>
 						<div class="col-md-6 col-sm-6 details-text">
 							<div class="content-holder">
-								<h2>Joyful party</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-									Labore eos suscipit earum voluptas aliquam recusandae, quae
-									iure adipisci, inventore quia, quos delectus quaerat
-									praesentium id expedita nihil illo accusantium, tempora.</p>
+								<h2>SUNDAY BRANCH</h2>
+								<p>Whether it is the ending to your epic Saturday, the beginning
+								 of Sunday or you're looking for an exceptional brunch with friends and family, Mokjo 
+								 will deliver. Enjoy steak and seafood, fire-roasted eggs and signature gourmet omelettes,
+								 fruit, pastries, custom salads, and other delicious surprises. An entertaining DJ makes
+								 the atmosphere fun, where guests are lively, and you're sure to have an amazing time. 
+								 Mokjo is more than a restaurant, it's an experience. </p>
 								<address>
-									<strong>Place: </strong> 1612 Collins Str, Victoria 8007 <br />
+									<strong>Place: </strong> Mokjo at Ali Demi <br />
 									<strong>Time: </strong> 07:30pm
 								</address>
-								<p class="btn btn-imfo btn-read-more">Read more</p>
+								<!-- <p class="btn btn-imfo btn-read-more">Read more</p> -->
 							</div>
 						</div>
 					</div>
@@ -133,11 +135,12 @@
 		<div class="row">
 			<div class="col-md-12 text-center marb-35">
 				<h1 class="header-h">Menu List</h1>
-				<p class="header-p">
+				
+				<!-- <p class="header-p">
 					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
 					nonummy <br />nibh euismod tincidunt ut laoreet dolore magna
 					aliquam.
-				</p>
+				</p> -->
 			</div>
 
 			<div class="col-md-12  text-center" id="menu-flters">
