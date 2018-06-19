@@ -100,6 +100,7 @@
 							class="form-control" id="price" name="price">
 					</div>
 					<button type="submit" class="btn btn-primary">Submit</button>
+					<br><br><br> <a href="/admin" class="btn btn-primary"> Back </a>
 				</form>
 			</c:when>
 		</c:choose>
@@ -191,18 +192,15 @@
 				<form action="/insertBookTable" method="POST">
 
 					<div class="form-group">
-						<label for="food">Name</label> 
-						<input type="text"
+						<label for="food">Name</label> <input type="text"
 							class="form-control" id="name" name="name">
 					</div>
 					<div class="form-group">
-						<label for="food">Email</label> 
-						<input type="text"
+						<label for="food">Email</label> <input type="text"
 							class="form-control" id="email" name="email">
 					</div>
 					<div class="form-group">
-						<label for="food">People</label> 
-						<input type="number"
+						<label for="food">People</label> <input type="number"
 							class="form-control" id="people" name="people">
 					</div>
 					<div class="form-group">
@@ -228,6 +226,7 @@
 					<!-- name email people phone tableid message reserveId date -->
 
 					<button type="submit" class="btn btn-primary">Submit</button>
+					<br><br><br> <a href="/admin" class="btn btn-primary"> Back </a>
 				</form>
 			</c:when>
 		</c:choose>
@@ -289,6 +288,9 @@
 					<!-- isAvailable, date, numberOfChairs, tableid -->
 
 					<button type="submit" class="btn btn-primary">Submit</button>
+
+					<br><br><br> <a href="/admin" class="btn btn-primary"> Back </a>
+
 				</form>
 			</c:when>
 		</c:choose>

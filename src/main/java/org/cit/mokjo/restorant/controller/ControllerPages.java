@@ -5,8 +5,6 @@ import java.sql.Date;
 import java.util.Random;
 
 import javax.servlet.http.HttpServletResponse;
-
-import org.assertj.core.internal.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator;
 import org.cit.mokjo.restorant.migration_tabels.BookTable;
 import org.cit.mokjo.restorant.migration_tabels.Users;
 import org.cit.mokjo.restorant.service.BookTableServiceImpl;
