@@ -5,12 +5,15 @@ import java.sql.Date;
 import java.util.Random;
 
 import javax.servlet.http.HttpServletResponse;
+
+import org.assertj.core.internal.bytebuddy.description.type.TypeDescription.Generic.Visitor.Validator;
 import org.cit.mokjo.restorant.migration_tabels.BookTable;
 import org.cit.mokjo.restorant.migration_tabels.Users;
 import org.cit.mokjo.restorant.service.BookTableServiceImpl;
 import org.cit.mokjo.restorant.service.FoodServiceImpl;
 import org.cit.mokjo.restorant.service.TabelServiceImpl;
 import org.cit.mokjo.restorant.service.UserService;
+import org.cit.mokjo.restorant.validation.RegisterValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -34,6 +37,8 @@ public class ControllerPages {
     private BookTableServiceImpl bookTableService;
 
     private Random rand = new Random();
+
+    private RegisterValidator validator = new RegisterValidator();
 
     @RequestMapping(value = { "/", "home", "" }, method = RequestMethod.GET)
     public String welcome(Model model) {
@@ -75,6 +80,7 @@ public class ControllerPages {
 		System.out.println("It is logt");
 		return "/auth_user/home_user";
 	    }
+
 	} else {
 	    model.addAttribute("errorLogin", "Empty the filds please");
 	    return "/loginC";
@@ -84,15 +90,24 @@ public class ControllerPages {
 
     @RequestMapping(value = { "/register" }, method = RequestMethod.POST)
     public String regUser(@RequestParam String name, String email, String password, String confirm, Model model) {
-	if (password.equals(confirm)) {
-	    if (userService.findUsersByEmail(email) != null) {
-		model.addAttribute("userExist", "The User Exist In database");
+
+	if (password.length() > 7) {
+	    if (password.equals(confirm)) {
+		if (validator.validateEmail(email)) {
+		    if (userService.findUsersByEmail(email) != null) {
+			model.addAttribute("userExist", "The User Exist In database");
+		    } else {
+			userService.saveUser(new Users(name, password, email, 1));
+			return "loginC";
+		    }
+		} else {
+		    model.addAttribute("emailError", "Enter a valid email");
+		}
 	    } else {
-		userService.saveUser(new Users(name, password, email, 1));
-		return "loginC";
+		model.addAttribute("notSamePassword", "The password and confirm password dont mathch");
 	    }
 	} else {
-	    model.addAttribute("notSamePassword", "The password and confirm password dont mathch");
+	    model.addAttribute("notSamePassword", "The password length should be bigger than 7");
 	}
 
 	return "/register";

@@ -70,6 +70,8 @@
 						</div>
 					</div>
 
+					<p>${emailError}</p>				
+					
 					<div class="form-group">
 						<label for="email" class="cols-sm-2 control-label">Your
 							Email</label>
