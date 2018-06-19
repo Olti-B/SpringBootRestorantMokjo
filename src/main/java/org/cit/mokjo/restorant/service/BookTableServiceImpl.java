@@ -30,4 +30,14 @@ public class BookTableServiceImpl implements BookTableService {
 		return bookRepo.findBookTableById(id);
 	}
 
+	public void delete(Long id) {
+	    bookRepo.deleteById(id);
+	    
+	}
+
+	public void save(BookTable bookTable) {
+	   bookRepo.save(bookTable);
+	    
+	}
+
 }

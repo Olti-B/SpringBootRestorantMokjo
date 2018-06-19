@@ -23,4 +23,13 @@ public class TabelServiceImpl implements TabelService {
 		return tableRepo.findTableById(id);
 	}
 
+	public void delete(Long id) {
+	   tableRepo.deleteById(id);
+	    
+	}
+
+	public void save(RestorantTabel restorantTabel) {
+	    tableRepo.save(restorantTabel);
+	}
+
 }

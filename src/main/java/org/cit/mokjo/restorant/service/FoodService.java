@@ -10,6 +10,6 @@ public interface FoodService {
 
 	public FoodItems findOneValue(long id);
 
-	public void save(FoodItems food);
+	public void delete(Long id);
 
 }

@@ -26,8 +26,12 @@ public class FoodServiceImpl implements FoodService {
 	}
 
 	@Override
-	public void save(FoodItems food) {
-		foodRepository.save(food);
+	public void delete(Long id) {
+		foodRepository.deleteById(id);;
+	}
+
+	public void save(FoodItems foodItems) {
+	    foodRepository.save(foodItems);
 	}
 
 }

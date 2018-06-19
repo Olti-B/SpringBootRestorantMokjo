@@ -18,41 +18,53 @@ public class RestorantTabel implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    
-    @Column(nullable=true)
+
+    @Column(nullable = true)
     private boolean isAvailable;
-    
-    @Column(nullable=true, unique=true)
+
+    @Column(nullable = true, unique = true)
     private Date date;
-    
-    @Column(nullable=false)
+
+    @Column(nullable = false)
     private Integer numberOfChairs;
-    
-    @Column(nullable=false)
+
+    @Column(nullable = false)
     private String tabelId;
 
-   
+    public RestorantTabel(boolean isAvailable, Date date, Integer numberOfChairs, String tabelId) {
+	super();
+	this.isAvailable = isAvailable;
+	this.date = date;
+	this.numberOfChairs = numberOfChairs;
+	this.tabelId = tabelId;
+    }
     
+    
+
+    public RestorantTabel() {
+	super();
+    }
+
+
+
     public boolean isAvailable() {
-        return isAvailable;
+	return isAvailable;
     }
 
     public Date getDate() {
-        return date;
+	return date;
     }
 
     public Integer getNumberOfChairs() {
-        return numberOfChairs;
+	return numberOfChairs;
     }
 
     public String getTabelId() {
-        return tabelId;
+	return tabelId;
     }
 
     public long getId() {
-        return id;
+	return id;
     }
 
-
-    
 }

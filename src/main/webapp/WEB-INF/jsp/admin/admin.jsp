@@ -43,6 +43,7 @@
 			<c:when test="${mode == 'VIEW'}">
 				<div class="row">
 					<h4 class="widget-title">Menu</h4>
+
 					<table class="table">
 						<thead>
 							<tr>
@@ -52,7 +53,9 @@
 								<th scope="col">Time Serving</th>
 								<th scope="col">Time Serving</th>
 								<th scope="col">Price</th>
-								<th scope="col">Edit</th>
+								<th scope="col">Delete</th>
+								<th scope="col"><a href="/insertFood"
+									class="btn btn-primary">Insert</a></th>
 							</tr>
 						</thead>
 						<tbody>
@@ -65,8 +68,7 @@
 										<td>${food.getTimeServing()}</td>
 										<td>${food.getFoodId()}</td>
 										<td>${food.getFoodPrice()}</td>
-										<td><a href="/updateFood?id=${food.getId()}"
-											class="fa fa-pencil">Edit</a></td>
+										<td><a href="/deleteFood?id=${food.getId()}">delete</a></td>
 									</tr>
 
 								</c:forEach>
@@ -76,31 +78,26 @@
 				</div>
 			</c:when>
 			<c:when test="${mode == 'EDIT_FOOD'}">
-				<form action="/saveFood"  method="POST">
-					<div class="form-group">
-						<label for="food">Id</label> <label for="food">${food.getId()}</label>
-					</div>
+				<form method="POST" action="/insertFood">
 					<div class="form-group">
 						<label for="food">Food Name</label> <input type="text"
-							class="form-control" id="foodName" value="${food.getFoodName()}">
+							class="form-control" id="foodName" name="foodName">
 					</div>
 					<div class="form-group">
 						<label for="food">Food Description</label> <input type="text"
-							class="form-control" id="description"
-							value="${food.getFoodDescription()}">
+							class="form-control" id="description" name="description">
 					</div>
 					<div class="form-group">
 						<label for="food">Time Serving</label> <input type="text"
-							class="form-control" id="timeServing"
-							value="${food.getTimeServing()}">
+							class="form-control" id="timeServing" name="timeServing">
 					</div>
 					<div class="form-group">
 						<label for="food">Food Id</label> <input type="text"
-							class="form-control" id="foodId" value="${food.getFoodId()}">
+							class="form-control" id="foodId" name="foodId">
 					</div>
 					<div class="form-group">
 						<label for="food">Price</label> <input type="number"
-							class="form-control" id="price" value="${food.getFoodPrice()}">
+							class="form-control" id="price" name="price">
 					</div>
 					<button type="submit" class="btn btn-primary">Submit</button>
 				</form>
@@ -121,7 +118,7 @@
 								<th scope="col">User Name</th>
 								<th scope="col">User Email</th>
 								<th scope="col">User Role</th>
-								<th scope="col">Edit</th>
+								<th scope="col">Delete</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -132,8 +129,7 @@
 										<td>${u.getUsername()}</td>
 										<td>${u.getEmail()}</td>
 										<td>${u.getRole()}</td>
-										<td><a href="/edtiUser?email=${u.getEmail()}"
-											class="fa fa-pencil">Edit</a></td>
+										<td><a href="/deleteUser?id=${u.getId()}">delete</a></td>
 									</tr>
 
 								</c:forEach>
@@ -141,26 +137,6 @@
 						</tbody>
 					</table>
 				</div>
-			</c:when>
-			<c:when test="${mode == 'EDIT_USER'}">
-				<form>
-					<div class="form-group">
-						<label for="food">Id</label> <label for="food">${user.getId()}</label>
-					</div>
-					<div class="form-group">
-						<label for="food">User Name</label> <input type="text"
-							class="form-control" id="foodName" value="${user.getUsername()}">
-					</div>
-					<div class="form-group">
-						<label for="food">Email</label> <input type="text"
-							class="form-control" id="description" value="${user.getEmail()}">
-					</div>
-					<div class="form-group">
-						<label for="food">Role</label> <input type="text"
-							class="form-control" id="timeServing" value="${user.getRole()}">
-					</div>
-					<button type="submit" class="btn btn-primary">Submit</button>
-				</form>
 			</c:when>
 		</c:choose>
 	</div>
@@ -184,6 +160,9 @@
 								<th scope="col">Message</th>
 								<th scope="col">Reserve Id</th>
 								<th scope="col">Date</th>
+								<th scope="col">Delete</th>
+								<th scope="col"><a href="/insertBookTable"
+									class="btn btn-primary">Insert</a></th>
 							</tr>
 						</thead>
 						<tbody>
@@ -197,9 +176,9 @@
 										<td>${t.getPhone()}</td>
 										<td>${t.getTableId()}</td>
 										<td>${t.getMessage()}</td>
+										<td>${t.getReservId()}</td>
 										<td>${t.getDate()}</td>
-										<td><a href="/editBookTable?id=${t.getId()}"
-											class="fa fa-pencil">Edit</a></td>
+										<td><a href="/deleteBookTable?id=${t.getId()}">delete</a></td>
 									</tr>
 
 								</c:forEach>
@@ -209,40 +188,45 @@
 				</div>
 			</c:when>
 			<c:when test="${mode == 'EDIT_BOOK_TABLE'}">
-				<form>
+				<form action="/insertBookTable" method="POST">
+
 					<div class="form-group">
-						<label for="food">Id</label> <label for="food">${book.getId()}</label>
+						<label for="food">Name</label> 
+						<input type="text"
+							class="form-control" id="name" name="name">
 					</div>
 					<div class="form-group">
-						<label for="food">Name</label> <input type="text"
-							class="form-control" id="foodName" value="${book.getName()}">
+						<label for="food">Email</label> 
+						<input type="text"
+							class="form-control" id="email" name="email">
 					</div>
 					<div class="form-group">
-						<label for="food">Email</label> <input type="text"
-							class="form-control" id="description" value="${book.getEmail()}">
-					</div>
-					<div class="form-group">
-						<label for="food">People</label> <input type="text"
-							class="form-control" id="timeServing" value="${book.getPeople()}">
+						<label for="food">People</label> 
+						<input type="number"
+							class="form-control" id="people" name="people">
 					</div>
 					<div class="form-group">
 						<label for="food">Phone</label> <input type="text"
-							class="form-control" id="timeServing" value="${book.getPhone()}">
+							class="form-control" id="phone" name="phone">
 					</div>
 					<div class="form-group">
 						<label for="food">Table id</label> <input type="text"
-							class="form-control" id="timeServing"
-							value="${book.getTableId()}">
+							class="form-control" id="tableid" name="tableid">
 					</div>
 					<div class="form-group">
 						<label for="food">Message</label> <input type="text"
-							class="form-control" id="timeServing"
-							value="${book.getMessage()}">
+							class="form-control" id="message" name="message">
 					</div>
 					<div class="form-group">
-						<label for="food">Date Booked</label> <input type="text"
-							class="form-control" id="timeServing" value="${book.getDate()}">
+						<label for="food">Reserve id</label> <input type="text"
+							class="form-control" id="reserveId" name="reserveId">
 					</div>
+					<div class="form-group">
+						<label for="food">Date Booked</label> <input type="date"
+							class="form-control" id="date" name="date">
+					</div>
+					<!-- name email people phone tableid message reserveId date -->
+
 					<button type="submit" class="btn btn-primary">Submit</button>
 				</form>
 			</c:when>
@@ -262,7 +246,9 @@
 								<th scope="col">Is Available</th>
 								<th scope="col">Number Of Chairs</th>
 								<th scope="col">Table Id</th>
-								<th scope="col">Edit</th>
+								<th scope="col">Delete</th>
+								<th scope="col"><a href="/insertTable"
+									class="btn btn-primary">Insert</a></th>
 							</tr>
 						</thead>
 						<tbody>
@@ -273,7 +259,7 @@
 										<td>${t.isAvailable()}</td>
 										<td>${t.getTabelId()}</td>
 										<td>${t.getNumberOfChairs()}</td>
-										<td><a href="/edtitTable?id=${t.getId()}" class="fa fa-pencil">Edit</a></td>
+										<td><a href="/deleteTable?id=${t.getId()}">delete</a></td>
 									</tr>
 
 								</c:forEach>
@@ -283,22 +269,25 @@
 				</div>
 			</c:when>
 			<c:when test="${mode == 'EDIT_TABLE'}">
-				<form>
-					<div class="form-group">
-						<label for="food">Id</label> <label for="food">${t.getId()}</label>
-					</div>
+				<form action="/insertTable" method="POST">
 					<div class="form-group">
 						<label for="food">Is Available</label> <input type="text"
-							class="form-control" id="foodName" value="${t.isAvailable()}">
+							class="form-control" id="isAvailable" name="isAvailable">
 					</div>
 					<div class="form-group">
 						<label for="food">Table Id </label> <input type="text"
-							class="form-control" id="description" value="${t.getTabelId()}">
+							class="form-control" id="tableid" name="tableid">
 					</div>
 					<div class="form-group">
 						<label for="food">Number Of Chairs</label> <input type="text"
-							class="form-control" id="timeServing" value="${t.getNumberOfChairs()}">
+							class="form-control" id="numberOfChairs" name="numberOfChairs">
 					</div>
+					<div class="form-group">
+						<label for="food">Date</label> <input type="date"
+							class="form-control" id="date" name="date">
+					</div>
+					<!-- isAvailable, date, numberOfChairs, tableid -->
+
 					<button type="submit" class="btn btn-primary">Submit</button>
 				</form>
 			</c:when>

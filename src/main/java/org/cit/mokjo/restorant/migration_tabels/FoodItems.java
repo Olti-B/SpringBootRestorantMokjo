@@ -38,7 +38,7 @@ public class FoodItems implements Serializable {
 	@Column(nullable = false)
 	private Timestamp date;
 
-	public FoodItems(String foodName, String foodDescription, Double foodPrice, String timeServing, String foodId) {
+	public FoodItems(String foodName, String foodDescription, String timeServing, String foodId, Double foodPrice) {
 		super();
 		this.foodName = foodName;
 		this.foodDescription = foodDescription;
@@ -51,28 +51,54 @@ public class FoodItems implements Serializable {
 		super();
 	}
 
+	public long getId() {
+	    return id;
+	}
+
 	public String getFoodName() {
-		return foodName;
+	    return foodName;
 	}
 
 	public String getFoodDescription() {
-		return foodDescription;
+	    return foodDescription;
 	}
 
 	public Double getFoodPrice() {
-		return foodPrice;
+	    return foodPrice;
 	}
 
 	public String getTimeServing() {
-		return timeServing;
+	    return timeServing;
 	}
 
 	public String getFoodId() {
-		return foodId;
+	    return foodId;
 	}
 
-	public long getId() {
-		return id;
+	public void setId(long id) {
+	    this.id = id;
 	}
 
+	public void setFoodName(String foodName) {
+	    this.foodName = foodName;
+	}
+
+	public void setFoodDescription(String foodDescription) {
+	    this.foodDescription = foodDescription;
+	}
+
+	public void setFoodPrice(Double foodPrice) {
+	    this.foodPrice = foodPrice;
+	}
+
+	public void setTimeServing(String timeServing) {
+	    this.timeServing = timeServing;
+	}
+
+	public void setFoodId(String foodId) {
+	    this.foodId = foodId;
+	}
+
+
+	
 }
