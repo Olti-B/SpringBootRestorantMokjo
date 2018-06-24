@@ -55,7 +55,7 @@
 			<p>${errorLogin}</p>
 			
 			<div class="main-login main-center">
-				<form class="form-horizontal" method="post" action="/login">
+				<form class="form-horizontal" method="POST" action="/login">
 
 					<div class="form-group">
 						<label for="email" class="cols-sm-2 control-label">Your
